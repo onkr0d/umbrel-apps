@@ -1,0 +1,21 @@
+services:
+  app:
+    image: ghcr.io/onkr0d/titanic/titanic:latest@sha256:0d88c0c2b2c349068432720a483e14d4fd7684ba191a646a8e6bf2dfde45f032
+    user: "0:0"
+    restart: unless-stopped
+    ports:
+      - "${APP_TITANIC_PORT:-3029}:3029"
+    environment:
+      - RUST_LOG=info
+      - IS_DEV=false
+      - FIREBASE_PROJECT_ID=${FIREBASE_PROJECT_ID:-titanic-uploader}
+      - PLEX_MEDIA_PATH=${PLEX_MEDIA_PATH:-/downloads}
+    volumes:
+      - ${APP_DATA_DIR}/data:/data
+      - ${UMBREL_ROOT}/home/Downloads:/downloads
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3029/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s

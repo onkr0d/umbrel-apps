@@ -1,0 +1,50 @@
+manifestVersion: 1
+id: sparkles-titanic
+name: Titanic
+tagline: Sink files to your Umbrel
+icon: http://100.86.96.43:3000/titanic-icon-4.png
+category: Development
+version: "1.0.0"
+port: 3029
+description: >-
+  Titanic is a complete video upload and compression system that allows users to upload videos through a web interface, compress them on a backend server, and automatically upload them to an Umbrel device running Plex.
+developer: Ivan
+website: https://github.com/onkr0d/Titanic
+submitter: Ivan
+submission: https://github.com/onkr0d/Titanic/
+repo: https://github.com/onkr0d/Titanic
+support: https://github.com/onkr0d/Titanic/issues
+gallery:
+  - http://100.86.96.43:3000/1.png
+  - http://100.86.96.43:3000/2.png
+  - http://100.86.96.43:3000/3.png
+releaseNotes: >-
+  Glorious release.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+
+# Environment variables that can be configured in Umbrel UI
+widgets:
+  - id: "firebase-project-id"
+    type: "text"
+    name: "Firebase Project ID"
+    description: "Your Firebase project ID for authentication"
+    required: true
+    value: ""
+
+# Permissions for accessing Plex media directory
+permissions:
+  - STORAGE_DOWNLOADS
+  - STORAGE_MEDIA
+
+# Configure Umbrel's reverse proxy and Tor HS for this app
+app_proxy:
+  default:
+    container: app
+    port: 3029
+    path: /
+    initialCheck:
+      path: /health
+      timeout: 120
