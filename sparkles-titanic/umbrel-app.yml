@@ -4,7 +4,7 @@ name: Titanic
 tagline: Sink files to your Umbrel
 icon: http://100.86.96.43:3000/titanic-icon-4.png
 category: Development
-version: "1.0.0"
+version: "1.0.0-d"
 port: 3029
 description: >-
   Titanic is a complete video upload and compression system that allows users to upload videos through a web interface, compress them on a backend server, and automatically upload them to an Umbrel device running Plex.
