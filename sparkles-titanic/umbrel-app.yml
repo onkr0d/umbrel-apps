@@ -18,6 +18,9 @@ gallery:
   - http://100.86.96.43:3000/1.png
   - http://100.86.96.43:3000/2.png
   - http://100.86.96.43:3000/3.png
+  - http://100.86.96.43:3000/4.png
+  - http://100.86.96.43:3000/5.png
+  - http://100.86.96.43:3000/6.png
 releaseNotes: >-
   Glorious release.
 dependencies: []
