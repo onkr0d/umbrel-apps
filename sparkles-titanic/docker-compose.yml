@@ -1,6 +1,6 @@
 services:
   app:
-    image: ghcr.io/onkr0d/titanic/titanic:v1.3.0@sha256:4770db996492af0985b30922f4964e4a8cc9ee8e1273621063795f65c42d97bd
+    image: ghcr.io/onkr0d/titanic/titanic:v1.4.0@sha256:b530efb228a666c9d8097950ae8b28dea6850d85040558c52d50f2340fe48f25
     user: "0:0"
     restart: unless-stopped
     ports:
