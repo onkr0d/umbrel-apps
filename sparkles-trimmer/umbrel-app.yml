@@ -1,6 +1,6 @@
 manifestVersion: 1
 id: sparkles-trimmer
-name: Titanic Trimmer
+name: Trimmer
 tagline: Trim and edit your video clips
 icon: http://ivans-mac:3000/trimmer-icon.png
 category: Media
