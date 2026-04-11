@@ -19,7 +19,6 @@ repo: https://github.com/onkr0d/Titanic
 support: https://github.com/onkr0d/Titanic/issues
 gallery: []
 releaseNotes: "Update to v1.1.0. See full changelog: https://github.com/onkr0d/Titanic/releases/tag/trimmer-v1.1.0"
-  Initial release.
 dependencies: []
 path: ""
 defaultUsername: ""
