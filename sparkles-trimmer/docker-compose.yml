@@ -1,6 +1,6 @@
 services:
   app:
-    image: ghcr.io/onkr0d/titanic/trimmer:v1.2.0@sha256:4b5ecc5ddd89139dfd0338fb02f37b3082d52f46b660ccbd5b6d4fbfb42e320f
+    image: ghcr.io/onkr0d/titanic/trimmer:v2.0.0@sha256:595223f613b16df716bfb98eb36b70648f13026ff4649d02ce25c35e785d8fb4
     user: "0:0"
     restart: unless-stopped
     ports:
