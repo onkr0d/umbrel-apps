@@ -3,8 +3,7 @@ services:
     image: ghcr.io/onkr0d/titanic/trimmer:v2.0.1@sha256:12cba1092bd01b7a5e3931a1acefb3366f6f641e9a74515cf79657e05056b99b
     user: "0:0"
     restart: unless-stopped
-    ports:
-      - "${APP_TRIMMER_PORT:-3030}:3030"
+    # no published ports on purpose: the app has no auth; Umbrel's app_proxy provides it
     environment:
       - RUST_LOG=info
       - MEDIA_PATH=/downloads

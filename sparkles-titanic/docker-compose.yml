@@ -3,8 +3,9 @@ services:
     image: ghcr.io/onkr0d/titanic/titanic:v1.4.6@sha256:5eac448feff7a0b006d7bc991d0ccc384b1c8c13985a3f0169a417ffb01c2c08
     user: "0:0"
     restart: unless-stopped
+    # tailnet-only bind (see exports.sh): the VPS needs this port, the LAN must not reach it
     ports:
-      - "${APP_TITANIC_PORT:-3029}:3029"
+      - "${APP_TITANIC_BIND_IP:-0.0.0.0}:${APP_TITANIC_PORT:-3029}:3029"
     environment:
       - RUST_LOG=info
       - IS_DEV=false
