@@ -1,4 +1,10 @@
 services:
+  # umbrelOS injects the proxy container from this stub; auth is on by default
+  app_proxy:
+    environment:
+      APP_HOST: sparkles-trimmer_app_1
+      APP_PORT: 3030
+
   app:
     image: ghcr.io/onkr0d/titanic/trimmer:v2.0.2@sha256:e23eb8725335a14507bacc83a184701eecd34d9d702ef059a9df288213159ab4
     user: "0:0"
