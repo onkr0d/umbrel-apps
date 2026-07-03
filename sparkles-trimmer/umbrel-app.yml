@@ -4,7 +4,7 @@ name: Trimmer
 tagline: Trim and edit your video clips
 icon: http://ivans-mac:3000/trimmer-icon.png
 category: Media
-version: "2.0.2"
+version: "2.0.3"
 port: 3030
 description: >-
   Titanic Trimmer is a lightweight video editing tool for trimming clips
@@ -18,7 +18,7 @@ submission: https://github.com/onkr0d/Titanic/
 repo: https://github.com/onkr0d/Titanic
 support: https://github.com/onkr0d/Titanic/issues
 gallery: []
-releaseNotes: "Update to v2.0.2. See full changelog: https://github.com/onkr0d/Titanic/releases/tag/trimmer-v2.0.2"
+releaseNotes: "Update to v2.0.3. See full changelog: https://github.com/onkr0d/Titanic/releases/tag/trimmer-v2.0.3"
 dependencies: []
 path: ""
 defaultUsername: ""
