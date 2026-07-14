@@ -1,6 +1,6 @@
 services:
   app:
-    image: ghcr.io/onkr0d/titanic/titanic:v1.4.7@sha256:5ce265795a69f90b0f3bce73c7c2de32382d8a376fc3658dfcec5535555ab342
+    image: ghcr.io/onkr0d/titanic/titanic:v1.5.0@sha256:74698f2d3a5210b2db47f9a6fcb9e494f3332f8a8adee298f5d13945adf8f42d
     user: "0:0"
     restart: unless-stopped
     # tailnet-only bind (see exports.sh): the VPS needs this port, the LAN must not reach it
