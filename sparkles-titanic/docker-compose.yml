@@ -1,11 +1,12 @@
 services:
   app:
-    image: ghcr.io/onkr0d/titanic/titanic:v1.5.0@sha256:74698f2d3a5210b2db47f9a6fcb9e494f3332f8a8adee298f5d13945adf8f42d
+    image: ghcr.io/onkr0d/titanic/titanic:v1.6.0@sha256:0651be5cd7b4a1b0bab3e8353c090b44749ce7398c805552b9b6180c07d27edd
+    # root: the bind mounts below are host-owned and uid 1000 cannot write them (see 80b9a9a)
     user: "0:0"
     restart: unless-stopped
-    # tailnet-only bind (see exports.sh): the VPS needs this port, the LAN must not reach it
+    # tailnet-only bind (see exports.sh); never publish 3031, the settings listener
     ports:
-      - "${APP_TITANIC_BIND_IP:-0.0.0.0}:${APP_TITANIC_PORT:-3029}:3029"
+      - "${APP_TITANIC_BIND_IP:-127.0.0.1}:${APP_TITANIC_PORT:-3029}:3029"
     environment:
       - RUST_LOG=info
       - IS_DEV=false
