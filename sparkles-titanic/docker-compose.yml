@@ -1,6 +1,12 @@
 services:
+  # umbrelOS injects the proxy container from this stub; auth is on by default
+  app_proxy:
+    environment:
+      APP_HOST: sparkles-titanic_app_1
+      APP_PORT: 3031
+
   app:
-    image: ghcr.io/onkr0d/titanic/titanic:v1.6.0@sha256:0651be5cd7b4a1b0bab3e8353c090b44749ce7398c805552b9b6180c07d27edd
+    image: ghcr.io/onkr0d/titanic/titanic:v1.6.1@sha256:97cf28c0ec7d19dfe1133e0750661877663852864cb6cadfb9cf1ea4dd047337
     # root: the bind mounts below are host-owned and uid 1000 cannot write them (see 80b9a9a)
     user: "0:0"
     restart: unless-stopped

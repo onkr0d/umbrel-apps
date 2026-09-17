@@ -5,7 +5,7 @@ name: Titanic
 tagline: Sink files to your Umbrel
 icon: http://ivans-mac:3000/titanic-icon-4.png
 category: Development
-version: "1.6.0"
+version: "1.6.1"
 # app_proxy serves the settings listener, which is never published to the host;
 # the upload API on 3029 is published (tailnet-only) for the VPS.
 port: 3031
@@ -22,7 +22,7 @@ gallery:
   - http://ivans-mac:3000/2.png
   - http://ivans-mac:3000/3.png
 # Single line on purpose: the release job rewrites this with sed.
-releaseNotes: "Update to v1.6.0. See full changelog: https://github.com/onkr0d/Titanic/releases/tag/v1.6.0"
+releaseNotes: "Update to v1.6.1. See full changelog: https://github.com/onkr0d/Titanic/releases/tag/v1.6.1"
 dependencies: []
 path: ""
 defaultUsername: ""
