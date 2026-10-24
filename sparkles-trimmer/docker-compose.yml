@@ -6,7 +6,7 @@ services:
       APP_PORT: 3030
 
   app:
-    image: ghcr.io/onkr0d/titanic/trimmer:v2.1.2@sha256:db77048b5653060eeed0d943e35bd0057ebf2825baa074b9d24a771e5a25254b
+    image: ghcr.io/onkr0d/titanic/trimmer:v2.1.3@sha256:42ab90894a3080d7973aeaa4932b40774740538fc9da1a64c54ff82423ffa4e1
     user: "0:0"
     restart: unless-stopped
     # no published ports on purpose: the app has no auth; Umbrel's app_proxy provides it
