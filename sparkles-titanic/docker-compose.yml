@@ -6,7 +6,7 @@ services:
       APP_PORT: 3031
 
   app:
-    image: ghcr.io/onkr0d/titanic/titanic:v1.6.6@sha256:419ac2e453f3c19b2619791a2594adfbec262c99e14af24df3c80e925004aae4
+    image: ghcr.io/onkr0d/titanic/titanic:v1.6.7@sha256:30b9fcdbcc6e2ddc2f02b8bd4370502a2f5d3d74819264cecb72690e0c655efb
     # root: the bind mounts below are host-owned and uid 1000 cannot write them (see 80b9a9a)
     user: "0:0"
     restart: unless-stopped
